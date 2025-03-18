@@ -18,34 +18,34 @@ project:
 
 pinout:
   # Inputs (ui_in)
-  ui[0]: "TX Data Bit 0"
-  ui[1]: "TX Data Bit 1"
-  ui[2]: "TX Data Bit 2"
-  ui[3]: "TX Data Bit 3"
-  ui[4]: "TX Data Bit 4"
-  ui[5]: "TX Data Bit 5"
-  ui[6]: "TX Data Bit 6"
-  ui[7]: "TX Data Bit 7"
+  ui[0]: "tx_data_in[0]"
+  ui[1]: "tx_data_in[1]"
+  ui[2]: "tx_data_in[2]"
+  ui[3]: "tx_data_in[3]"
+  ui[4]: "tx_data_in[4]"
+  ui[5]: "tx_data_in[5]"
+  ui[6]: "tx_data_in[6]"
+  ui[7]: "tx_data_in[7]"
 
   # Outputs (uo_out)
-  uo[0]: "RX Data Bit 0"
-  uo[1]: "RX Data Bit 1"
-  uo[2]: "RX Data Bit 2"
-  uo[3]: "RX Data Bit 3"
-  uo[4]: "RX Data Bit 4"
-  uo[5]: "RX Data Bit 5"
-  uo[6]: "RX Data Bit 6"
-  uo[7]: "RX Data Bit 7"
+  uo[0]: "rx_data_out[0]"
+  uo[1]: "rx_data_out[1]"
+  uo[2]: "rx_data_out[2]"
+  uo[3]: "rx_data_out[3]"
+  uo[4]: "rx_data_out[4]"
+  uo[5]: "rx_data_out[5]"
+  uo[6]: "rx_data_out[6]"
+  uo[7]: "rx_data_out[7]"
 
   # Bidirectional pins (uio)
-  uio[0]: "TXD (Transmit Data)"
-  uio[1]: "RXD (Receive Data)"
-  uio[2]: "TX Ready"
-  uio[3]: "TX Full"
-  uio[4]: "RX Valid"
-  uio[5]: "RX Empty"
-  uio[6]: "TX Write Enable"
-  uio[7]: "RX Read Enable"
+  uio[0]: "txd"
+  uio[1]: "rxd"
+  uio[2]: "tx_ready"
+  uio[3]: "tx_full"
+  uio[4]: "rx_valid"
+  uio[5]: "rx_empty"
+  uio[6]: "tx_wr_en"
+  uio[7]: "rx_rd_en"
 
 # Do not change!
 yaml_version: 6
