@@ -1,56 +1,51 @@
 # Tiny Tapeout project information
 project:
-  title:        ""      # Project title
-  author:       ""      # Your name
-  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  ""      # One line description of what your project does
-  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
-
-  # How many tiles your design occupies? A single tile is about 167x108 uM.
-  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
-
-  # Your top module name must start with "tt_um_". Make it unique by including your github username:
-  top_module:  "tt_um_example"
-
-  # List your project's source files here.
-  # Source files must be in ./src and you must list each source file separately, one per line.
-  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  title:        "UART Transceiver" 
+  author:       "Dixon Mathews"        # Replace with your name
+  discord:      "yourusername#1234" # Optional discord handle
+  description:  "8-bit UART transceiver with FIFO buffers and flow control @ 9600 baud"
+  language:     "Verilog"
+  clock_hz:     10000000           # 10 MHz clock
+  tiles:        "1x1"              # Occupies one tile
+  top_module:   "tt_um_captmodterm13_uart" # Replace 'username' with your GitHub username
   source_files:
-    - "project.v"
+    - "tt_um_username_uart.v"
+    - "uart_top.v"
+    - "baud_gen.v"
+    - "uart_tx.v"
+    - "uart_rx.v"
+    - "uart_fifo.v"
 
-# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
-# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
-  # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
+  # Inputs (ui_in)
+  ui[0]: "TX Data Bit 0"
+  ui[1]: "TX Data Bit 1"
+  ui[2]: "TX Data Bit 2"
+  ui[3]: "TX Data Bit 3"
+  ui[4]: "TX Data Bit 4"
+  ui[5]: "TX Data Bit 5"
+  ui[6]: "TX Data Bit 6"
+  ui[7]: "TX Data Bit 7"
 
-  # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  # Outputs (uo_out)
+  uo[0]: "RX Data Bit 0"
+  uo[1]: "RX Data Bit 1"
+  uo[2]: "RX Data Bit 2"
+  uo[3]: "RX Data Bit 3"
+  uo[4]: "RX Data Bit 4"
+  uo[5]: "RX Data Bit 5"
+  uo[6]: "RX Data Bit 6"
+  uo[7]: "RX Data Bit 7"
 
-  # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
-  uio[6]: ""
-  uio[7]: ""
+  # Bidirectional pins (uio)
+  uio[0]: "TXD (Transmit Data)"
+  uio[1]: "RXD (Receive Data)"
+  uio[2]: "TX Ready"
+  uio[3]: "TX Full"
+  uio[4]: "RX Valid"
+  uio[5]: "RX Empty"
+  uio[6]: "TX Write Enable"
+  uio[7]: "RX Read Enable"
 
 # Do not change!
 yaml_version: 6
