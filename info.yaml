@@ -9,7 +9,7 @@ project:
   tiles:        "1x1"              # Occupies one tile
   top_module:   "tt_um_captmodterm13_uart" # Replace 'username' with your GitHub username
   source_files:
-    - "tt_um_username_uart.v"
+    - "project.v"
     - "uart_top.v"
     - "baud_gen.v"
     - "uart_tx.v"
